@@ -11,25 +11,37 @@ namespace Vipera
 
         private void Start()
         {
+#if VIPERA_CORE
             Prefs.FirstOpenTime = DateTime.Now;
             Prefs.FirstOpenDay = DateTime.Today;
+#else
+            Debug.LogError("Vipera.Core is required for Vipera.Firebase to work.\n" +
+                           "Please add the package. Link: https://github.com/LukaszHynek/Vipera.Core.git");
+#endif
         }
 
         public void InitializeFirebase()
         {
+#if VIPERA_CORE
             AnalyticsReady = true;
 
             if (!isEnabled.Value)
                 SetCollectionEnabled();
+#endif
         }
 
+#if VIPERA_CORE
         static BoolPP isEnabled = new BoolPP("prop_" + AnalyticsConsts.UserProperties.CustomFirstOpenTime);
+
 
         public static bool IsEnabled
         {
             get => isEnabled.Value && AnalyticsReady;
             private set => isEnabled.Value = value;
         }
+#else
+        static bool IsEnabled = false;
+#endif
 
         public static void SetCollectionEnabled()
         {
@@ -48,7 +60,7 @@ namespace Vipera
             FirebaseAnalytics.LogEvent(eventName);
         }
 
-        #region LogEventsWithParams
+#region LogEventsWithParams
         public static void LogEvent(string eventName, string paramName, string paramValue)
         {
             if (!IsEnabled)
@@ -93,7 +105,7 @@ namespace Vipera
             TryDebugLog(eventName + "with param: " + paramName + " value: " + paramValue);
             FirebaseAnalytics.LogEvent(eventName, paramName, paramValue);
         }
-        #endregion
+#endregion
 
         public static void SetUserProperty(string name, string property, bool setOnce = false)
         {
