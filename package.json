@@ -17,7 +17,6 @@
   "dependencies": {
     "com.google.firebase.remote-config": "7.0.2",
     "com.google.firebase.analytics": "7.0.2",
-    "com.google.firebase.messaging": "7.0.2",
-    "com.vipera.core": "https://github.com/LukaszHynek/Vipera.Core.git"
+    "com.google.firebase.messaging": "7.0.2"
   }
 }
