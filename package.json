@@ -1,0 +1,23 @@
+{
+  "name": "com.vipera.firebase",
+  "displayName": "Vipera Firebase",
+  "version": "1.0.0",
+  "unity": "2017.1",
+  "keywords": [
+    "RemoteConfig",
+    "Remote Config",
+    "Remote",
+    "Config"
+  ],
+  "description": "Reused Firebase logic",
+  "hideInEditor": false,
+  "author": {
+    "name": "Vipera Games"
+  },
+  "dependencies": {
+    "com.google.firebase.remote-config": "7.0.2",
+    "com.google.firebase.analytics": "7.0.2",
+    "com.google.firebase.messaging": "7.0.2",
+    "com.vipera.core": "https://github.com/LukaszHynek/Vipera.Core.git"
+  }
+}

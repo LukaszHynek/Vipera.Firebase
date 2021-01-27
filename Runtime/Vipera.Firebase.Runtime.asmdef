@@ -1,0 +1,15 @@
+{
+    "name": "Vipera.Firebase.Runtime",
+    "references": [
+        "GUID:b40e0f75a78965642b1e095545e133de"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

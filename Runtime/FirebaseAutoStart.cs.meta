@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 2c495319330bcda4ca3cc6666b4849cf
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - firebasePrefab: {fileID: 2222176532704049157, guid: b59ac77d0b388f34d8e9fda19b5b1b2b,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
