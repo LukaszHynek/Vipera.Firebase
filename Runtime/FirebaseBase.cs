@@ -44,12 +44,14 @@ namespace Vipera
 
         public void InitializeFirebase()
         {
+#if VIPERA_CORE
             MainThreadQueue.Enqueue(() =>
             {
                 analytics.InitializeFirebase();
                 remoteConfig.InitializeFirebase();
                 FirebaseMessages.Init();
             });
+#endif
         }
 
         void OnDestroy()
