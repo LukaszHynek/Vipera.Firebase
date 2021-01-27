@@ -1,7 +1,7 @@
 {
     "name": "Vipera.Firebase.Runtime",
     "references": [
-        "GUID:b40e0f75a78965642b1e095545e133de"
+        "Vipera.Core.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -10,6 +10,12 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "com.vipera.core",
+            "expression": "",
+            "define": "VIPERA_CORE"
+        }
+    ],
     "noEngineReferences": false
 }
